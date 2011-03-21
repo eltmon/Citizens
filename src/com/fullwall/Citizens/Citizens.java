@@ -62,6 +62,8 @@ public class Citizens extends JavaPlugin {
 				this);
 		pm.registerEvent(Event.Type.CHUNK_UNLOADED, wl, Event.Priority.Normal,
 				this);
+        pm.registerEvent(Event.Type.PLAYER_CHAT, chatListen, Event.Priority.Normal, this);
+        
 		getServer().getPluginManager().registerEvent(Event.Type.PLUGIN_ENABLE,
 				pl, Event.Priority.Monitor, this);
 		PluginDescriptionFile pdfFile = this.getDescription();
